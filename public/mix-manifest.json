@@ -1,0 +1,18 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/router.js": "/js/router.js",
+    "/js/popper.js": "/js/popper.js",
+    "/js/manifest.js": "/js/manifest.js",
+    "/js/Login.js": "/js/Login.js",
+    "/js/Header.js": "/js/Header.js",
+    "/js/NotFound.js": "/js/NotFound.js",
+    "/js/Home.js": "/js/Home.js",
+    "/js/User.js": "/js/User.js",
+    "/js/Food.js": "/js/Food.js",
+    "/js/Users.js": "/js/Users.js",
+    "/js/Menu.js": "/js/Menu.js",
+    "/js/daylyMenu.js": "/js/daylyMenu.js",
+    "/js/WeeklyMenu.js": "/js/WeeklyMenu.js",
+    "/css/app.css": "/css/app.css",
+    "/js/vendor.js": "/js/vendor.js"
+}

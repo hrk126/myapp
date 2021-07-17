@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  font-size: 100%;
+  @include xl {
+    font-size: 87.5%;
+  }
+  @include md {
+    font-size: 75%;
+  }
+}
