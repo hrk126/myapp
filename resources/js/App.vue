@@ -1,7 +1,8 @@
 <template>
   <div style="min-height: 100vh; position: relative">
     <transition name="fade" mode="out-in">
-      <img v-if="isHome" :src="backImage" :key="backImage" class="background" alt="back-image">
+      <img v-if="isLogin" :src="'images/login.jpg'" :key="'login'" class="background" alt="back-image">
+      <img v-else-if="isHome" :src="backImage" :key="backImage" class="background" alt="back-image">
     </transition>
     <router-view name="header"></router-view>
     <main class="container">
@@ -20,6 +21,7 @@
 export default {
   data() {
     return {
+      isLogin: false,
       isHome: false
     }
   },
@@ -30,19 +32,22 @@ export default {
   },
   computed: {
     backImage() {
-      //homeの場合は画像を表示
+      //homeの場合は各月の数値の画像を表示
       let month = this.$store.getters.getMonth;
       return `images/${month}.jpg`;
     }
   },
   watch: {
     $route() {
-      if(this.$route.path.match(/^\/home$/)) {
+      if(this.$route.path.match(/^\/$/)) {
+        this.isLogin = true;
+        this.isHome = false;
+      }else if(this.$route.path.match(/^\/home$/)) {
+        this.isLogin = false;
         this.isHome = true;
       }else {
+        this.isLogin = false;
         this.isHome = false;
-        //home以外はvuexのmonthプロパティを-1にして画像を表示させない
-        this.$store.dispatch('changeMonth', -1 );
       }
     }
   },

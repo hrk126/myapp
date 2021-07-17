@@ -6,10 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    /**
-     *カレンダーの表示月(1～12 | -1)を保持
-     *App.vueのbackImage名の参照元
-     */
+    //カレンダーの表示月(1～12)を保持
     month: {
       type: Number,
     },
@@ -20,7 +17,7 @@ export default new Vuex.Store({
   },
   getters: {
     getMonth: state => state.month,
-    //ログインしているとuserを返す
+    //ログインしている場合userを返す
     check: state => !! state.user,
     username: state => state.user ? state.user.name : '',
     getloginErrorMessages: state => state.loginErrorMessages
